@@ -1,3 +1,12 @@
+import subprocess
+import sys
+
+try:
+    import sklearn
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn==1.3.2"])
+
+
 import os
 import joblib
 import pandas as pd
